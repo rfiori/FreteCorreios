@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreteCorreios", "FreteCorreios.csproj", "{79477408-71F4-481E-87C5-75B315939B7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreteCorreios", "FreteCorreios\FreteCorreios.csproj", "{79477408-71F4-481E-87C5-75B315939B7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_FreteCorreios", "Test_FreteCorreios\Test_FreteCorreios.csproj", "{2FE1948B-CFF3-4BB8-AC4E-27274E0641F3}"
 EndProject

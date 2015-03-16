@@ -80,7 +80,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FreteCorreios.csproj">
+    <ProjectReference Include="..\FreteCorreios\FreteCorreios.csproj">
       <Project>{79477408-71f4-481e-87c5-75b315939b7b}</Project>
       <Name>FreteCorreios</Name>
     </ProjectReference>
