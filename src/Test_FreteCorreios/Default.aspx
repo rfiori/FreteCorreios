@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server" style="font-family:'Arial Narrow', Arial, sans-serif;">
         <div style="padding:10px; line-height:34px; border: solid 2px #494949; border-radius:5px;">
-            <div style="text-align:center;"><h2>Test with Webservice</h2></div>
+            <div style="text-align:center;"><h2>Consuming Webservice</h2></div>
             <asp:TextBox ID="tbCodEmpresa1" runat="server" Width="80px">0</asp:TextBox>
             Código da empresa, para que tem contrato com o Correios.<br />
             <asp:TextBox ID="tbSenha1" runat="server" Width="80px">0</asp:TextBox>
