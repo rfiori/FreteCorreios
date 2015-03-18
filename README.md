@@ -7,7 +7,7 @@ Todos os preços de serviços retornados são calculados pelo Webservice do Corr
 [en]All returned prices of services are calculated from the Brazilian Post Office Webservices, that's ever updated.
 
 #Serviços Disponíveis [en]Services Available
-Os serviços abaixo estão disponíveis para a consulta.
+Os serviços abaixo estão disponíveis para a consulta.<br/>
 41106 - PAC sem contrato <br/>
 41068 - PAC com contrato <br/>
 81019 - e-SEDEX com contrato <br/>
@@ -30,5 +30,38 @@ Calcular o preço e prazo dos serviços de encomenda dos Correios (Brasil)
 <br/>[en] Calculates the price and time of order services of Correios (Brazilian post office)
 
 # Colaboração [en]Colaboration
-Toda e qualquer colaboraçao será bem vinda, esteja a vontade para faze-la.
+Toda e qualquer colaboração será bem vinda, esteja a vontade para faze-la.
 <br/>[en] Any collaboration is welcome, please feel free to do it.
+
+#Web.config or App.config
+Para utilizar o Webservice é necessário adicionar no Web.config ou App.config de seu projeto as linhas abaixo.
+```xml
+<configuration>
+...
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="CalcPrecoPrazoWSSoap" />
+      </basicHttpBinding>
+      <customBinding>
+        <binding name="CalcPrecoPrazoWSSoap12">
+          <textMessageEncoding messageVersion="Soap12" />
+          <httpTransport />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx"
+          binding="basicHttpBinding" bindingConfiguration="CalcPrecoPrazoWSSoap"
+          contract="wsCalculaPrecoPrazo.CalcPrecoPrazoWSSoap" name="CalcPrecoPrazoWSSoap" />
+      <endpoint address="http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx"
+          binding="customBinding" bindingConfiguration="CalcPrecoPrazoWSSoap12"
+          contract="wsCalculaPrecoPrazo.CalcPrecoPrazoWSSoap" name="CalcPrecoPrazoWSSoap12" />
+    </client>
+  </system.serviceModel>
+    ...
+</configuration>
+```
+
+#Screen WebExemplo
+![Exemplo](http://s11.postimg.org/e8d1nn1o3/Frete_Correios_S1.png)
