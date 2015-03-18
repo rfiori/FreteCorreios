@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Test_FreteCorreios {
+namespace WebExemplo {
     
     
     public partial class Default {
