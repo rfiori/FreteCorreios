@@ -64,4 +64,4 @@ Para utilizar o Webservice é necessário adicionar no Web.config ou App.config 
 ```
 
 #Screen WebExemplo
-![Exemplo](http://s11.postimg.org/e8d1nn1o3/Frete_Correios_S1.png)
+![Exemplo](http://s1.postimg.org/6nknhcmcf/Frete_Correios.png)
