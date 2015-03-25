@@ -9,7 +9,7 @@ namespace FreteCorreios
     /// <summary>
     /// Consulta com resultado no formato XML, na página do cliente e na página dos Correios:
     /// </summary>
-    public class urlCalculaPrecoPrazo
+    public class CalculaPrecoPrazoURL
     {
         internal string Servico;
         internal string CodEmpresa;
@@ -44,7 +44,7 @@ namespace FreteCorreios
         /// <param name="nVlValorDeclarado">Indica se a encomenda será entregue com o serviço adicional valor declarado. Se não optar pelo serviço informar zero.</param>
         /// <param name="sCdAvisoRecebimento">Indica se a encomenda será entregue com o serviço adicional aviso de recebimento. (S – Sim, N – Não).</param>
         // <param name="sRetorno">Indica a forma de retorno da consulta. (XML - Resultado em XML),(Popup - Resultado em uma janela popup) e (URL - Resultado via post em uma página do requisitante).</param>
-        public urlCalculaPrecoPrazo(string nCdEmpresa, string sDsSenha, string sSevico, string sCepOrigem, string sCepDestino, int nVlPeso,
+        public CalculaPrecoPrazoURL(string nCdEmpresa, string sDsSenha, string sSevico, string sCepOrigem, string sCepDestino, int nVlPeso,
             int nCdFormato, int nVlComprimento, int nVlAltura, int nVlLargura, int nVlDiametro, string sCdMaoPropria, int nVlValorDeclarado,
             string sCdAvisoRecebimento)
         {

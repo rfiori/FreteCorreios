@@ -19,37 +19,165 @@ namespace FreteCorreios.wsCalculaPrecoPrazo {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazo(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento);
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPrecoPrazo", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPrecoPrazo(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    System.AsyncCallback callback, 
+                    object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoPrazo(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalcPrecoPrazoData", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazoData(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPrecoPrazoData", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPrecoPrazoData(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    System.AsyncCallback callback, 
+                    object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoPrazoData(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalcPrecoPrazoRestricao", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazoRestricao(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo);
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPrecoPrazoRestricao", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPrecoPrazoRestricao(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    System.AsyncCallback callback, 
+                    object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoPrazoRestricao(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalcPreco", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPreco(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPreco", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPreco(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    System.AsyncCallback callback, 
+                    object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPreco(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalcPrecoData", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoData(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo);
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPrecoData", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPrecoData(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    System.AsyncCallback callback, 
+                    object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoData(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalcPrazo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazo(string nCdServico, string sCepOrigem, string sCepDestino);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPrazo", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPrazo(string nCdServico, string sCepOrigem, string sCepDestino, System.AsyncCallback callback, object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrazo(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalcPrazoData", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazoData(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo);
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPrazoData", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPrazoData(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo, System.AsyncCallback callback, object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrazoData(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalcPrazoRestricao", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazoRestricao(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo);
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPrazoRestricao", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPrazoRestricao(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo, System.AsyncCallback callback, object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrazoRestricao(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CalcPrecoFAC", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoFAC(string nCdServico, string nVlPeso, string strDataCalculo);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CalcPrecoFAC", ReplyAction="*")]
+        System.IAsyncResult BeginCalcPrecoFAC(string nCdServico, string nVlPeso, string strDataCalculo, System.AsyncCallback callback, object asyncState);
+        
+        FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoFAC(System.IAsyncResult result);
     }
     
     /// <remarks/>
@@ -277,7 +405,232 @@ namespace FreteCorreios.wsCalculaPrecoPrazo {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrecoPrazoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrecoPrazoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrecoPrazoDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrecoPrazoDataCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrecoPrazoRestricaoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrecoPrazoRestricaoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrecoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrecoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrecoDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrecoDataCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrazoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrazoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrazoDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrazoDataCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrazoRestricaoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrazoRestricaoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CalcPrecoFACCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CalcPrecoFACCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((FreteCorreios.wsCalculaPrecoPrazo.cResultado)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class CalcPrecoPrazoWSSoapClient : System.ServiceModel.ClientBase<FreteCorreios.wsCalculaPrecoPrazo.CalcPrecoPrazoWSSoap>, FreteCorreios.wsCalculaPrecoPrazo.CalcPrecoPrazoWSSoap {
+        
+        private BeginOperationDelegate onBeginCalcPrecoPrazoDelegate;
+        
+        private EndOperationDelegate onEndCalcPrecoPrazoDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrecoPrazoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCalcPrecoPrazoDataDelegate;
+        
+        private EndOperationDelegate onEndCalcPrecoPrazoDataDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrecoPrazoDataCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCalcPrecoPrazoRestricaoDelegate;
+        
+        private EndOperationDelegate onEndCalcPrecoPrazoRestricaoDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrecoPrazoRestricaoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCalcPrecoDelegate;
+        
+        private EndOperationDelegate onEndCalcPrecoDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrecoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCalcPrecoDataDelegate;
+        
+        private EndOperationDelegate onEndCalcPrecoDataDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrecoDataCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCalcPrazoDelegate;
+        
+        private EndOperationDelegate onEndCalcPrazoDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrazoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCalcPrazoDataDelegate;
+        
+        private EndOperationDelegate onEndCalcPrazoDataDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrazoDataCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCalcPrazoRestricaoDelegate;
+        
+        private EndOperationDelegate onEndCalcPrazoRestricaoDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrazoRestricaoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCalcPrecoFACDelegate;
+        
+        private EndOperationDelegate onEndCalcPrecoFACDelegate;
+        
+        private System.Threading.SendOrPostCallback onCalcPrecoFACCompletedDelegate;
         
         public CalcPrecoPrazoWSSoapClient() {
         }
@@ -298,40 +651,759 @@ namespace FreteCorreios.wsCalculaPrecoPrazo {
                 base(binding, remoteAddress) {
         }
         
+        public event System.EventHandler<CalcPrecoPrazoCompletedEventArgs> CalcPrecoPrazoCompleted;
+        
+        public event System.EventHandler<CalcPrecoPrazoDataCompletedEventArgs> CalcPrecoPrazoDataCompleted;
+        
+        public event System.EventHandler<CalcPrecoPrazoRestricaoCompletedEventArgs> CalcPrecoPrazoRestricaoCompleted;
+        
+        public event System.EventHandler<CalcPrecoCompletedEventArgs> CalcPrecoCompleted;
+        
+        public event System.EventHandler<CalcPrecoDataCompletedEventArgs> CalcPrecoDataCompleted;
+        
+        public event System.EventHandler<CalcPrazoCompletedEventArgs> CalcPrazoCompleted;
+        
+        public event System.EventHandler<CalcPrazoDataCompletedEventArgs> CalcPrazoDataCompleted;
+        
+        public event System.EventHandler<CalcPrazoRestricaoCompletedEventArgs> CalcPrazoRestricaoCompleted;
+        
+        public event System.EventHandler<CalcPrecoFACCompletedEventArgs> CalcPrecoFACCompleted;
+        
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazo(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento) {
             return base.Channel.CalcPrecoPrazo(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPrecoPrazo(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    System.AsyncCallback callback, 
+                    object asyncState) {
+            return base.Channel.BeginCalcPrecoPrazo(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoPrazo(System.IAsyncResult result) {
+            return base.Channel.EndCalcPrecoPrazo(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPrecoPrazo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdEmpresa = ((string)(inValues[0]));
+            string sDsSenha = ((string)(inValues[1]));
+            string nCdServico = ((string)(inValues[2]));
+            string sCepOrigem = ((string)(inValues[3]));
+            string sCepDestino = ((string)(inValues[4]));
+            string nVlPeso = ((string)(inValues[5]));
+            int nCdFormato = ((int)(inValues[6]));
+            decimal nVlComprimento = ((decimal)(inValues[7]));
+            decimal nVlAltura = ((decimal)(inValues[8]));
+            decimal nVlLargura = ((decimal)(inValues[9]));
+            decimal nVlDiametro = ((decimal)(inValues[10]));
+            string sCdMaoPropria = ((string)(inValues[11]));
+            decimal nVlValorDeclarado = ((decimal)(inValues[12]));
+            string sCdAvisoRecebimento = ((string)(inValues[13]));
+            return this.BeginCalcPrecoPrazo(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPrecoPrazo(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPrecoPrazo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrecoPrazoCompleted(object state) {
+            if ((this.CalcPrecoPrazoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrecoPrazoCompleted(this, new CalcPrecoPrazoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrecoPrazoAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento) {
+            this.CalcPrecoPrazoAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, null);
+        }
+        
+        public void CalcPrecoPrazoAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, object userState) {
+            if ((this.onBeginCalcPrecoPrazoDelegate == null)) {
+                this.onBeginCalcPrecoPrazoDelegate = new BeginOperationDelegate(this.OnBeginCalcPrecoPrazo);
+            }
+            if ((this.onEndCalcPrecoPrazoDelegate == null)) {
+                this.onEndCalcPrecoPrazoDelegate = new EndOperationDelegate(this.OnEndCalcPrecoPrazo);
+            }
+            if ((this.onCalcPrecoPrazoCompletedDelegate == null)) {
+                this.onCalcPrecoPrazoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrecoPrazoCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrecoPrazoDelegate, new object[] {
+                        nCdEmpresa,
+                        sDsSenha,
+                        nCdServico,
+                        sCepOrigem,
+                        sCepDestino,
+                        nVlPeso,
+                        nCdFormato,
+                        nVlComprimento,
+                        nVlAltura,
+                        nVlLargura,
+                        nVlDiametro,
+                        sCdMaoPropria,
+                        nVlValorDeclarado,
+                        sCdAvisoRecebimento}, this.onEndCalcPrecoPrazoDelegate, this.onCalcPrecoPrazoCompletedDelegate, userState);
         }
         
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazoData(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo) {
             return base.Channel.CalcPrecoPrazoData(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPrecoPrazoData(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    System.AsyncCallback callback, 
+                    object asyncState) {
+            return base.Channel.BeginCalcPrecoPrazoData(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoPrazoData(System.IAsyncResult result) {
+            return base.Channel.EndCalcPrecoPrazoData(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPrecoPrazoData(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdEmpresa = ((string)(inValues[0]));
+            string sDsSenha = ((string)(inValues[1]));
+            string nCdServico = ((string)(inValues[2]));
+            string sCepOrigem = ((string)(inValues[3]));
+            string sCepDestino = ((string)(inValues[4]));
+            string nVlPeso = ((string)(inValues[5]));
+            int nCdFormato = ((int)(inValues[6]));
+            decimal nVlComprimento = ((decimal)(inValues[7]));
+            decimal nVlAltura = ((decimal)(inValues[8]));
+            decimal nVlLargura = ((decimal)(inValues[9]));
+            decimal nVlDiametro = ((decimal)(inValues[10]));
+            string sCdMaoPropria = ((string)(inValues[11]));
+            decimal nVlValorDeclarado = ((decimal)(inValues[12]));
+            string sCdAvisoRecebimento = ((string)(inValues[13]));
+            string sDtCalculo = ((string)(inValues[14]));
+            return this.BeginCalcPrecoPrazoData(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPrecoPrazoData(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPrecoPrazoData(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrecoPrazoDataCompleted(object state) {
+            if ((this.CalcPrecoPrazoDataCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrecoPrazoDataCompleted(this, new CalcPrecoPrazoDataCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrecoPrazoDataAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo) {
+            this.CalcPrecoPrazoDataAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, null);
+        }
+        
+        public void CalcPrecoPrazoDataAsync(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    object userState) {
+            if ((this.onBeginCalcPrecoPrazoDataDelegate == null)) {
+                this.onBeginCalcPrecoPrazoDataDelegate = new BeginOperationDelegate(this.OnBeginCalcPrecoPrazoData);
+            }
+            if ((this.onEndCalcPrecoPrazoDataDelegate == null)) {
+                this.onEndCalcPrecoPrazoDataDelegate = new EndOperationDelegate(this.OnEndCalcPrecoPrazoData);
+            }
+            if ((this.onCalcPrecoPrazoDataCompletedDelegate == null)) {
+                this.onCalcPrecoPrazoDataCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrecoPrazoDataCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrecoPrazoDataDelegate, new object[] {
+                        nCdEmpresa,
+                        sDsSenha,
+                        nCdServico,
+                        sCepOrigem,
+                        sCepDestino,
+                        nVlPeso,
+                        nCdFormato,
+                        nVlComprimento,
+                        nVlAltura,
+                        nVlLargura,
+                        nVlDiametro,
+                        sCdMaoPropria,
+                        nVlValorDeclarado,
+                        sCdAvisoRecebimento,
+                        sDtCalculo}, this.onEndCalcPrecoPrazoDataDelegate, this.onCalcPrecoPrazoDataCompletedDelegate, userState);
+        }
+        
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazoRestricao(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo) {
             return base.Channel.CalcPrecoPrazoRestricao(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPrecoPrazoRestricao(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    System.AsyncCallback callback, 
+                    object asyncState) {
+            return base.Channel.BeginCalcPrecoPrazoRestricao(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoPrazoRestricao(System.IAsyncResult result) {
+            return base.Channel.EndCalcPrecoPrazoRestricao(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPrecoPrazoRestricao(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdEmpresa = ((string)(inValues[0]));
+            string sDsSenha = ((string)(inValues[1]));
+            string nCdServico = ((string)(inValues[2]));
+            string sCepOrigem = ((string)(inValues[3]));
+            string sCepDestino = ((string)(inValues[4]));
+            string nVlPeso = ((string)(inValues[5]));
+            int nCdFormato = ((int)(inValues[6]));
+            decimal nVlComprimento = ((decimal)(inValues[7]));
+            decimal nVlAltura = ((decimal)(inValues[8]));
+            decimal nVlLargura = ((decimal)(inValues[9]));
+            decimal nVlDiametro = ((decimal)(inValues[10]));
+            string sCdMaoPropria = ((string)(inValues[11]));
+            decimal nVlValorDeclarado = ((decimal)(inValues[12]));
+            string sCdAvisoRecebimento = ((string)(inValues[13]));
+            string sDtCalculo = ((string)(inValues[14]));
+            return this.BeginCalcPrecoPrazoRestricao(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPrecoPrazoRestricao(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPrecoPrazoRestricao(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrecoPrazoRestricaoCompleted(object state) {
+            if ((this.CalcPrecoPrazoRestricaoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrecoPrazoRestricaoCompleted(this, new CalcPrecoPrazoRestricaoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrecoPrazoRestricaoAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo) {
+            this.CalcPrecoPrazoRestricaoAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, null);
+        }
+        
+        public void CalcPrecoPrazoRestricaoAsync(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    object userState) {
+            if ((this.onBeginCalcPrecoPrazoRestricaoDelegate == null)) {
+                this.onBeginCalcPrecoPrazoRestricaoDelegate = new BeginOperationDelegate(this.OnBeginCalcPrecoPrazoRestricao);
+            }
+            if ((this.onEndCalcPrecoPrazoRestricaoDelegate == null)) {
+                this.onEndCalcPrecoPrazoRestricaoDelegate = new EndOperationDelegate(this.OnEndCalcPrecoPrazoRestricao);
+            }
+            if ((this.onCalcPrecoPrazoRestricaoCompletedDelegate == null)) {
+                this.onCalcPrecoPrazoRestricaoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrecoPrazoRestricaoCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrecoPrazoRestricaoDelegate, new object[] {
+                        nCdEmpresa,
+                        sDsSenha,
+                        nCdServico,
+                        sCepOrigem,
+                        sCepDestino,
+                        nVlPeso,
+                        nCdFormato,
+                        nVlComprimento,
+                        nVlAltura,
+                        nVlLargura,
+                        nVlDiametro,
+                        sCdMaoPropria,
+                        nVlValorDeclarado,
+                        sCdAvisoRecebimento,
+                        sDtCalculo}, this.onEndCalcPrecoPrazoRestricaoDelegate, this.onCalcPrecoPrazoRestricaoCompletedDelegate, userState);
         }
         
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPreco(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento) {
             return base.Channel.CalcPreco(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento);
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPreco(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    System.AsyncCallback callback, 
+                    object asyncState) {
+            return base.Channel.BeginCalcPreco(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPreco(System.IAsyncResult result) {
+            return base.Channel.EndCalcPreco(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPreco(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdEmpresa = ((string)(inValues[0]));
+            string sDsSenha = ((string)(inValues[1]));
+            string nCdServico = ((string)(inValues[2]));
+            string sCepOrigem = ((string)(inValues[3]));
+            string sCepDestino = ((string)(inValues[4]));
+            string nVlPeso = ((string)(inValues[5]));
+            int nCdFormato = ((int)(inValues[6]));
+            decimal nVlComprimento = ((decimal)(inValues[7]));
+            decimal nVlAltura = ((decimal)(inValues[8]));
+            decimal nVlLargura = ((decimal)(inValues[9]));
+            decimal nVlDiametro = ((decimal)(inValues[10]));
+            string sCdMaoPropria = ((string)(inValues[11]));
+            decimal nVlValorDeclarado = ((decimal)(inValues[12]));
+            string sCdAvisoRecebimento = ((string)(inValues[13]));
+            return this.BeginCalcPreco(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPreco(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPreco(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrecoCompleted(object state) {
+            if ((this.CalcPrecoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrecoCompleted(this, new CalcPrecoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrecoAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento) {
+            this.CalcPrecoAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, null);
+        }
+        
+        public void CalcPrecoAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, object userState) {
+            if ((this.onBeginCalcPrecoDelegate == null)) {
+                this.onBeginCalcPrecoDelegate = new BeginOperationDelegate(this.OnBeginCalcPreco);
+            }
+            if ((this.onEndCalcPrecoDelegate == null)) {
+                this.onEndCalcPrecoDelegate = new EndOperationDelegate(this.OnEndCalcPreco);
+            }
+            if ((this.onCalcPrecoCompletedDelegate == null)) {
+                this.onCalcPrecoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrecoCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrecoDelegate, new object[] {
+                        nCdEmpresa,
+                        sDsSenha,
+                        nCdServico,
+                        sCepOrigem,
+                        sCepDestino,
+                        nVlPeso,
+                        nCdFormato,
+                        nVlComprimento,
+                        nVlAltura,
+                        nVlLargura,
+                        nVlDiametro,
+                        sCdMaoPropria,
+                        nVlValorDeclarado,
+                        sCdAvisoRecebimento}, this.onEndCalcPrecoDelegate, this.onCalcPrecoCompletedDelegate, userState);
+        }
+        
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoData(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo) {
             return base.Channel.CalcPrecoData(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPrecoData(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    System.AsyncCallback callback, 
+                    object asyncState) {
+            return base.Channel.BeginCalcPrecoData(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoData(System.IAsyncResult result) {
+            return base.Channel.EndCalcPrecoData(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPrecoData(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdEmpresa = ((string)(inValues[0]));
+            string sDsSenha = ((string)(inValues[1]));
+            string nCdServico = ((string)(inValues[2]));
+            string sCepOrigem = ((string)(inValues[3]));
+            string sCepDestino = ((string)(inValues[4]));
+            string nVlPeso = ((string)(inValues[5]));
+            int nCdFormato = ((int)(inValues[6]));
+            decimal nVlComprimento = ((decimal)(inValues[7]));
+            decimal nVlAltura = ((decimal)(inValues[8]));
+            decimal nVlLargura = ((decimal)(inValues[9]));
+            decimal nVlDiametro = ((decimal)(inValues[10]));
+            string sCdMaoPropria = ((string)(inValues[11]));
+            decimal nVlValorDeclarado = ((decimal)(inValues[12]));
+            string sCdAvisoRecebimento = ((string)(inValues[13]));
+            string sDtCalculo = ((string)(inValues[14]));
+            return this.BeginCalcPrecoData(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPrecoData(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPrecoData(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrecoDataCompleted(object state) {
+            if ((this.CalcPrecoDataCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrecoDataCompleted(this, new CalcPrecoDataCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrecoDataAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo) {
+            this.CalcPrecoDataAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo, null);
+        }
+        
+        public void CalcPrecoDataAsync(
+                    string nCdEmpresa, 
+                    string sDsSenha, 
+                    string nCdServico, 
+                    string sCepOrigem, 
+                    string sCepDestino, 
+                    string nVlPeso, 
+                    int nCdFormato, 
+                    decimal nVlComprimento, 
+                    decimal nVlAltura, 
+                    decimal nVlLargura, 
+                    decimal nVlDiametro, 
+                    string sCdMaoPropria, 
+                    decimal nVlValorDeclarado, 
+                    string sCdAvisoRecebimento, 
+                    string sDtCalculo, 
+                    object userState) {
+            if ((this.onBeginCalcPrecoDataDelegate == null)) {
+                this.onBeginCalcPrecoDataDelegate = new BeginOperationDelegate(this.OnBeginCalcPrecoData);
+            }
+            if ((this.onEndCalcPrecoDataDelegate == null)) {
+                this.onEndCalcPrecoDataDelegate = new EndOperationDelegate(this.OnEndCalcPrecoData);
+            }
+            if ((this.onCalcPrecoDataCompletedDelegate == null)) {
+                this.onCalcPrecoDataCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrecoDataCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrecoDataDelegate, new object[] {
+                        nCdEmpresa,
+                        sDsSenha,
+                        nCdServico,
+                        sCepOrigem,
+                        sCepDestino,
+                        nVlPeso,
+                        nCdFormato,
+                        nVlComprimento,
+                        nVlAltura,
+                        nVlLargura,
+                        nVlDiametro,
+                        sCdMaoPropria,
+                        nVlValorDeclarado,
+                        sCdAvisoRecebimento,
+                        sDtCalculo}, this.onEndCalcPrecoDataDelegate, this.onCalcPrecoDataCompletedDelegate, userState);
         }
         
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazo(string nCdServico, string sCepOrigem, string sCepDestino) {
             return base.Channel.CalcPrazo(nCdServico, sCepOrigem, sCepDestino);
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPrazo(string nCdServico, string sCepOrigem, string sCepDestino, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginCalcPrazo(nCdServico, sCepOrigem, sCepDestino, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrazo(System.IAsyncResult result) {
+            return base.Channel.EndCalcPrazo(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPrazo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdServico = ((string)(inValues[0]));
+            string sCepOrigem = ((string)(inValues[1]));
+            string sCepDestino = ((string)(inValues[2]));
+            return this.BeginCalcPrazo(nCdServico, sCepOrigem, sCepDestino, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPrazo(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPrazo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrazoCompleted(object state) {
+            if ((this.CalcPrazoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrazoCompleted(this, new CalcPrazoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrazoAsync(string nCdServico, string sCepOrigem, string sCepDestino) {
+            this.CalcPrazoAsync(nCdServico, sCepOrigem, sCepDestino, null);
+        }
+        
+        public void CalcPrazoAsync(string nCdServico, string sCepOrigem, string sCepDestino, object userState) {
+            if ((this.onBeginCalcPrazoDelegate == null)) {
+                this.onBeginCalcPrazoDelegate = new BeginOperationDelegate(this.OnBeginCalcPrazo);
+            }
+            if ((this.onEndCalcPrazoDelegate == null)) {
+                this.onEndCalcPrazoDelegate = new EndOperationDelegate(this.OnEndCalcPrazo);
+            }
+            if ((this.onCalcPrazoCompletedDelegate == null)) {
+                this.onCalcPrazoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrazoCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrazoDelegate, new object[] {
+                        nCdServico,
+                        sCepOrigem,
+                        sCepDestino}, this.onEndCalcPrazoDelegate, this.onCalcPrazoCompletedDelegate, userState);
+        }
+        
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazoData(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo) {
             return base.Channel.CalcPrazoData(nCdServico, sCepOrigem, sCepDestino, sDtCalculo);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPrazoData(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginCalcPrazoData(nCdServico, sCepOrigem, sCepDestino, sDtCalculo, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrazoData(System.IAsyncResult result) {
+            return base.Channel.EndCalcPrazoData(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPrazoData(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdServico = ((string)(inValues[0]));
+            string sCepOrigem = ((string)(inValues[1]));
+            string sCepDestino = ((string)(inValues[2]));
+            string sDtCalculo = ((string)(inValues[3]));
+            return this.BeginCalcPrazoData(nCdServico, sCepOrigem, sCepDestino, sDtCalculo, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPrazoData(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPrazoData(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrazoDataCompleted(object state) {
+            if ((this.CalcPrazoDataCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrazoDataCompleted(this, new CalcPrazoDataCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrazoDataAsync(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo) {
+            this.CalcPrazoDataAsync(nCdServico, sCepOrigem, sCepDestino, sDtCalculo, null);
+        }
+        
+        public void CalcPrazoDataAsync(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo, object userState) {
+            if ((this.onBeginCalcPrazoDataDelegate == null)) {
+                this.onBeginCalcPrazoDataDelegate = new BeginOperationDelegate(this.OnBeginCalcPrazoData);
+            }
+            if ((this.onEndCalcPrazoDataDelegate == null)) {
+                this.onEndCalcPrazoDataDelegate = new EndOperationDelegate(this.OnEndCalcPrazoData);
+            }
+            if ((this.onCalcPrazoDataCompletedDelegate == null)) {
+                this.onCalcPrazoDataCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrazoDataCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrazoDataDelegate, new object[] {
+                        nCdServico,
+                        sCepOrigem,
+                        sCepDestino,
+                        sDtCalculo}, this.onEndCalcPrazoDataDelegate, this.onCalcPrazoDataCompletedDelegate, userState);
         }
         
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazoRestricao(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo) {
             return base.Channel.CalcPrazoRestricao(nCdServico, sCepOrigem, sCepDestino, sDtCalculo);
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPrazoRestricao(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginCalcPrazoRestricao(nCdServico, sCepOrigem, sCepDestino, sDtCalculo, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrazoRestricao(System.IAsyncResult result) {
+            return base.Channel.EndCalcPrazoRestricao(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPrazoRestricao(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdServico = ((string)(inValues[0]));
+            string sCepOrigem = ((string)(inValues[1]));
+            string sCepDestino = ((string)(inValues[2]));
+            string sDtCalculo = ((string)(inValues[3]));
+            return this.BeginCalcPrazoRestricao(nCdServico, sCepOrigem, sCepDestino, sDtCalculo, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPrazoRestricao(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPrazoRestricao(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrazoRestricaoCompleted(object state) {
+            if ((this.CalcPrazoRestricaoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrazoRestricaoCompleted(this, new CalcPrazoRestricaoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrazoRestricaoAsync(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo) {
+            this.CalcPrazoRestricaoAsync(nCdServico, sCepOrigem, sCepDestino, sDtCalculo, null);
+        }
+        
+        public void CalcPrazoRestricaoAsync(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo, object userState) {
+            if ((this.onBeginCalcPrazoRestricaoDelegate == null)) {
+                this.onBeginCalcPrazoRestricaoDelegate = new BeginOperationDelegate(this.OnBeginCalcPrazoRestricao);
+            }
+            if ((this.onEndCalcPrazoRestricaoDelegate == null)) {
+                this.onEndCalcPrazoRestricaoDelegate = new EndOperationDelegate(this.OnEndCalcPrazoRestricao);
+            }
+            if ((this.onCalcPrazoRestricaoCompletedDelegate == null)) {
+                this.onCalcPrazoRestricaoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrazoRestricaoCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrazoRestricaoDelegate, new object[] {
+                        nCdServico,
+                        sCepOrigem,
+                        sCepDestino,
+                        sDtCalculo}, this.onEndCalcPrazoRestricaoDelegate, this.onCalcPrazoRestricaoCompletedDelegate, userState);
+        }
+        
         public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoFAC(string nCdServico, string nVlPeso, string strDataCalculo) {
             return base.Channel.CalcPrecoFAC(nCdServico, nVlPeso, strDataCalculo);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginCalcPrecoFAC(string nCdServico, string nVlPeso, string strDataCalculo, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginCalcPrecoFAC(nCdServico, nVlPeso, strDataCalculo, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public FreteCorreios.wsCalculaPrecoPrazo.cResultado EndCalcPrecoFAC(System.IAsyncResult result) {
+            return base.Channel.EndCalcPrecoFAC(result);
+        }
+        
+        private System.IAsyncResult OnBeginCalcPrecoFAC(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string nCdServico = ((string)(inValues[0]));
+            string nVlPeso = ((string)(inValues[1]));
+            string strDataCalculo = ((string)(inValues[2]));
+            return this.BeginCalcPrecoFAC(nCdServico, nVlPeso, strDataCalculo, callback, asyncState);
+        }
+        
+        private object[] OnEndCalcPrecoFAC(System.IAsyncResult result) {
+            FreteCorreios.wsCalculaPrecoPrazo.cResultado retVal = this.EndCalcPrecoFAC(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCalcPrecoFACCompleted(object state) {
+            if ((this.CalcPrecoFACCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CalcPrecoFACCompleted(this, new CalcPrecoFACCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CalcPrecoFACAsync(string nCdServico, string nVlPeso, string strDataCalculo) {
+            this.CalcPrecoFACAsync(nCdServico, nVlPeso, strDataCalculo, null);
+        }
+        
+        public void CalcPrecoFACAsync(string nCdServico, string nVlPeso, string strDataCalculo, object userState) {
+            if ((this.onBeginCalcPrecoFACDelegate == null)) {
+                this.onBeginCalcPrecoFACDelegate = new BeginOperationDelegate(this.OnBeginCalcPrecoFAC);
+            }
+            if ((this.onEndCalcPrecoFACDelegate == null)) {
+                this.onEndCalcPrecoFACDelegate = new EndOperationDelegate(this.OnEndCalcPrecoFAC);
+            }
+            if ((this.onCalcPrecoFACCompletedDelegate == null)) {
+                this.onCalcPrecoFACCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCalcPrecoFACCompleted);
+            }
+            base.InvokeAsync(this.onBeginCalcPrecoFACDelegate, new object[] {
+                        nCdServico,
+                        nVlPeso,
+                        strDataCalculo}, this.onEndCalcPrecoFACDelegate, this.onCalcPrecoFACCompletedDelegate, userState);
         }
     }
 }

@@ -42,12 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CorreiosWS.cs" />
     <Compile Include="Service References\wsCalculaPrecoPrazo\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="urlCalculaPrecoPrazo.cs" />
+    <Compile Include="CalculaPrecoPrazoURL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,11 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DataGrama\ClassDiagram1.cd" />
     <None Include="Service References\wsCalculaPrecoPrazo\CalcPrecoPrazo.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Documentacao\Resumo_Doc.txt" />
     <None Include="Service References\wsCalculaPrecoPrazo\FreteCorreios.wsCalculaPrecoPrazo.cResultado.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -73,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\wsCalculaPrecoPrazo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentacao\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
