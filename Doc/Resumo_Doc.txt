@@ -70,7 +70,7 @@ StrRetorno        String  Indica a forma de retorno da consulta.                
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
     
 Exemplo de URL que tem consulta com PAC e SEDEX juntas;
-http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?nCdEmpresa=6093531&sDsSenha=01988713&sCepOrigem=30170110&sCepDestino=95500000&nVlPeso=2&nCdFormato=1&nVlComprimento=20&nVlAltura=5&nVlLargura=15&sCdMaoPropria=n&nVlValorDeclarado=0&sCdAvisoRecebimento=n&nCdServico=41068,40096&nVlDiametro=0&StrRetorno=xml
+http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?nCdEmpresa=0&sDsSenha=0&sCepOrigem=30170110&sCepDestino=95500000&nVlPeso=2&nCdFormato=1&nVlComprimento=20&nVlAltura=5&nVlLargura=15&sCdMaoPropria=n&nVlValorDeclarado=0&sCdAvisoRecebimento=n&nCdServico=41068,40096&nVlDiametro=0&StrRetorno=xml
     
 Código de erro - Mensagem de erro
 --------------   -----------------
