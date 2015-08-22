@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace FreteCorreios
 {
@@ -14,12 +15,49 @@ namespace FreteCorreios
             wsCorreios = new wsCalculaPrecoPrazo.CalcPrecoPrazoWSSoapClient("CalcPrecoPrazoWSSoap");
         }
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazo(string nCdServico, string sCepOrigem, string sCepDestino)
+        /// <summary>
+        /// Calcula o prazo da postagem.
+        /// </summary>
+        /// <param name="nCdServico">Código do serviço.</param>
+        /// <param name="sCepOrigem">CEP de origm.</param>
+        /// <param name="sCepDestino">CEP de destino.</param>
+        /// <returns></returns>
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrazoAsync(string nCdServico, string sCepOrigem, string sCepDestino)
         {
-            var res = new wsCalculaPrecoPrazo.cResultado();
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(sCepOrigem))
+                throw new ArgumentNullException(nameof(sCepOrigem));
+            if (string.IsNullOrWhiteSpace(sCepDestino))
+                throw new ArgumentNullException(nameof(sCepDestino));
+
+            wsCalculaPrecoPrazo.cResultado res; //= new wsCalculaPrecoPrazo.cResultado();
+
             try
             {
-                res = wsCorreios.CalcPrazo(nCdServico, sCepOrigem, sCepDestino);
+                res = await wsCorreios.CalcPrazoAsync(nCdServico, sCepOrigem, sCepDestino);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return res;
+
+        }
+
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrazoDataAsync(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo)
+        {
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(sCepOrigem))
+                throw new ArgumentNullException(nameof(sCepOrigem));
+            if (string.IsNullOrWhiteSpace(sCepDestino))
+                throw new ArgumentNullException(nameof(sCepDestino));
+
+            wsCalculaPrecoPrazo.cResultado res;
+            try
+            {
+                res = await wsCorreios.CalcPrazoDataAsync(nCdServico, sCepOrigem, sCepDestino, sDtCalculo);
             }
             catch (Exception e)
             {
@@ -28,12 +66,19 @@ namespace FreteCorreios
             return res;
         }
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazoData(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo)
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrazoRestricaoAsync(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo)
         {
-            var res = new wsCalculaPrecoPrazo.cResultado();
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(sCepOrigem))
+                throw new ArgumentNullException(nameof(sCepOrigem));
+            if (string.IsNullOrWhiteSpace(sCepDestino))
+                throw new ArgumentNullException(nameof(sCepDestino));
+
+            wsCalculaPrecoPrazo.cResultado res;
             try
             {
-                res = wsCorreios.CalcPrazoData(nCdServico, sCepOrigem, sCepDestino, sDtCalculo);
+                res = await wsCorreios.CalcPrazoRestricaoAsync(nCdServico, sCepOrigem, sCepDestino, sDtCalculo);
             }
             catch (Exception e)
             {
@@ -42,12 +87,19 @@ namespace FreteCorreios
             return res;
         }
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrazoRestricao(string nCdServico, string sCepOrigem, string sCepDestino, string sDtCalculo)
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrecoAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento)
         {
-            var res = new wsCalculaPrecoPrazo.cResultado();
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(sCepOrigem))
+                throw new ArgumentNullException(nameof(sCepOrigem));
+            if (string.IsNullOrWhiteSpace(sCepDestino))
+                throw new ArgumentNullException(nameof(sCepDestino));
+
+            wsCalculaPrecoPrazo.cResultado res;
             try
             {
-                res = wsCorreios.CalcPrazoRestricao(nCdServico, sCepOrigem, sCepDestino, sDtCalculo);
+                res = await wsCorreios.CalcPrecoAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento);
             }
             catch (Exception e)
             {
@@ -56,12 +108,19 @@ namespace FreteCorreios
             return res;
         }
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPreco(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento)
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrecoDataAsync (string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo)
         {
-            var res = new wsCalculaPrecoPrazo.cResultado();
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(sCepOrigem))
+                throw new ArgumentNullException(nameof(sCepOrigem));
+            if (string.IsNullOrWhiteSpace(sCepDestino))
+                throw new ArgumentNullException(nameof(sCepDestino));
+
+            wsCalculaPrecoPrazo.cResultado res;
             try
             {
-                res = wsCorreios.CalcPreco(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento);
+                res = await wsCorreios.CalcPrecoDataAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
             }
             catch (Exception e)
             {
@@ -70,12 +129,19 @@ namespace FreteCorreios
             return res;
         }
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoData(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo)
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrecoFACAsync(string nCdServico, string nVlPeso, string strDataCalculo)
         {
-            var res = new wsCalculaPrecoPrazo.cResultado();
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(nVlPeso))
+                throw new ArgumentNullException(nameof(nVlPeso));
+            if (string.IsNullOrWhiteSpace(strDataCalculo))
+                throw new ArgumentNullException(nameof(strDataCalculo));
+
+            wsCalculaPrecoPrazo.cResultado res;
             try
             {
-                res = wsCorreios.CalcPrecoData(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
+                res = await wsCorreios.CalcPrecoFACAsync(nCdServico, nVlPeso, strDataCalculo);
             }
             catch (Exception e)
             {
@@ -84,12 +150,22 @@ namespace FreteCorreios
             return res;
         }
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoFAC(string nCdServico, string nVlPeso, string strDataCalculo)
+        /// <summary>
+        /// Calcula o preço da postagem.
+        /// </summary>
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrecoPrazoAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento)
         {
-            var res = new wsCalculaPrecoPrazo.cResultado();
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(sCepOrigem))
+                throw new ArgumentNullException(nameof(sCepOrigem));
+            if (string.IsNullOrWhiteSpace(sCepDestino))
+                throw new ArgumentNullException(nameof(sCepDestino));
+
+            wsCalculaPrecoPrazo.cResultado res = new wsCalculaPrecoPrazo.cResultado();
             try
             {
-                res = wsCorreios.CalcPrecoFAC(nCdServico, nVlPeso, strDataCalculo);
+                res = await wsCorreios.CalcPrecoPrazoAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento);
             }
             catch (Exception e)
             {
@@ -98,12 +174,19 @@ namespace FreteCorreios
             return res;
         }
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazo(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento)
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrecoPrazoDataAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo)
         {
-            var res = new wsCalculaPrecoPrazo.cResultado();
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(sCepOrigem))
+                throw new ArgumentNullException(nameof(sCepOrigem));
+            if (string.IsNullOrWhiteSpace(sCepDestino))
+                throw new ArgumentNullException(nameof(sCepDestino));
+
+            wsCalculaPrecoPrazo.cResultado res;
             try
             {
-                res = wsCorreios.CalcPrecoPrazo(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento);
+                res = await wsCorreios.CalcPrecoPrazoDataAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
             }
             catch (Exception e)
             {
@@ -112,26 +195,19 @@ namespace FreteCorreios
             return res;
         }
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazoData(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo)
+        public async Task<wsCalculaPrecoPrazo.cResultado> CalcPrecoPrazoRestricaoAsync(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo)
         {
-            var res = new wsCalculaPrecoPrazo.cResultado();
-            try
-            {
-                res = wsCorreios.CalcPrecoPrazoData(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            return res;
-        }
+            if (string.IsNullOrWhiteSpace(nCdServico))
+                throw new ArgumentNullException(nameof(nCdServico));
+            if (string.IsNullOrWhiteSpace(sCepOrigem))
+                throw new ArgumentNullException(nameof(sCepOrigem));
+            if (string.IsNullOrWhiteSpace(sCepDestino))
+                throw new ArgumentNullException(nameof(sCepDestino));
 
-        public FreteCorreios.wsCalculaPrecoPrazo.cResultado CalcPrecoPrazoRestricao(string nCdEmpresa, string sDsSenha, string nCdServico, string sCepOrigem, string sCepDestino, string nVlPeso, int nCdFormato, decimal nVlComprimento, decimal nVlAltura, decimal nVlLargura, decimal nVlDiametro, string sCdMaoPropria, decimal nVlValorDeclarado, string sCdAvisoRecebimento, string sDtCalculo)
-        {
-            var res = new wsCalculaPrecoPrazo.cResultado();
+            wsCalculaPrecoPrazo.cResultado res;
             try
             {
-                res = wsCorreios.CalcPrecoPrazoRestricao(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
+                res = await wsCorreios.CalcPrecoPrazoRestricaoAsync(nCdEmpresa, sDsSenha, nCdServico, sCepOrigem, sCepDestino, nVlPeso, nCdFormato, nVlComprimento, nVlAltura, nVlLargura, nVlDiametro, sCdMaoPropria, nVlValorDeclarado, sCdAvisoRecebimento, sDtCalculo);
             }
             catch (Exception e)
             {

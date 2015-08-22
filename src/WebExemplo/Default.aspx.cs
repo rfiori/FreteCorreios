@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Threading.Tasks;
 
 namespace WebExemplo
 {
@@ -16,12 +17,12 @@ namespace WebExemplo
 
         }
 
-        protected void btnGetWS_Click(object sender, EventArgs e)
+        protected async void btnGetWS_Click(object sender, EventArgs e)
         {
             FC = new FreteCorreios.FreteCorreiosWS();
 
-            var Res = FC.CalcPrecoPrazo(
-                tbCodEmpresa1.Text,             //--=> Código da empresa para que tem contrato com o Correios.
+            var Res = await FC.CalcPrecoPrazoAsync(
+                tbCodEmpresa1.Text,             //--=> Seu código administrativo junto à ECT. Está disponível no corpo do contrato.
                 tbSenha1.Text,                  //--=> Utilizado junco com o contrato.
                 ddlServico1.SelectedValue,      //--=> Número do serviço.
                 tbCepO1.Text,                   //--=> CEP Origem.
@@ -39,43 +40,48 @@ namespace WebExemplo
 
             lblRes1.Text = "";
 
-            lblRes1.Text = AllCorreiosResultado(Res);
+            lblRes1.Text = await AllCorreiosResult(Res);
 
             AllFuncion();
         }
 
-        private void AllFuncion()
+        private async void AllFuncion()
         {
-            lblAllService.Text = "<u>CalcPrazo</u><br/>" + AllCorreiosResultado(FC.CalcPrazo(ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text)) + "<br/><br/>";
+            lblAllService.Text = "<u>CalcPrazo</u><br/>" + await AllCorreiosResult(await FC.CalcPrazoAsync(ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text)) + "<br/><br/>";
 
-            lblAllService.Text += "<u>CalcPrazoData</u><br/>" + AllCorreiosResultado(FC.CalcPrazoData(ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text, DateTime.Now.Date.ToShortDateString())) + "<br/><br/>";
+            lblAllService.Text += "<u>CalcPrazoData</u><br/>" + await AllCorreiosResult(await FC.CalcPrazoDataAsync(ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text, DateTime.Now.Date.ToShortDateString())) + "<br/><br/>";
 
-            lblAllService.Text += "<u>CalcPrazoRestricao</u><br/>" + AllCorreiosResultado(FC.CalcPrazoRestricao(ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text, DateTime.Now.Date.ToShortDateString())) + "<br/><br/>";
+            lblAllService.Text += "<u>CalcPrazoRestricao</u><br/>" + await AllCorreiosResult(await FC.CalcPrazoRestricaoAsync(ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text, DateTime.Now.Date.ToShortDateString())) + "<br/><br/>";
 
-            lblAllService.Text += "<u>CalcPrazoRestricao</u><br/>" + AllCorreiosResultado(FC.CalcPreco(tbCodEmpresa1.Text, tbSenha1.Text, ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text, tbPeso1.Text, int.Parse(ddlFormato1.SelectedValue), decimal.Parse(tbCompr1.Text), decimal.Parse(tbAltur1.Text), decimal.Parse(tbLarg1.Text), decimal.Parse(tbDiam1.Text), ddlMaoP1.SelectedValue, decimal.Parse(tbValD1.Text), ddlAvisoR1.SelectedValue)) + "<br/><br/>";
+            lblAllService.Text += "<u>CalcPrazoRestricao</u><br/>" + await AllCorreiosResult(await FC.CalcPrecoAsync(tbCodEmpresa1.Text, tbSenha1.Text, ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text, tbPeso1.Text, int.Parse(ddlFormato1.SelectedValue), decimal.Parse(tbCompr1.Text), decimal.Parse(tbAltur1.Text), decimal.Parse(tbLarg1.Text), decimal.Parse(tbDiam1.Text), ddlMaoP1.SelectedValue, decimal.Parse(tbValD1.Text), ddlAvisoR1.SelectedValue)) + "<br/><br/>";
 
-            lblAllService.Text += "<u>CalcPrecoPrazoRestricao</u><br/>" + AllCorreiosResultado(FC.CalcPrecoPrazoRestricao(tbCodEmpresa1.Text, tbSenha1.Text, ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text, tbPeso1.Text, int.Parse(ddlFormato1.SelectedValue), decimal.Parse(tbCompr1.Text), decimal.Parse(tbAltur1.Text), decimal.Parse(tbLarg1.Text), decimal.Parse(tbDiam1.Text), ddlMaoP1.SelectedValue, decimal.Parse(tbValD1.Text), ddlAvisoR1.SelectedValue, DateTime.Now.Date.ToShortDateString())) + "<br/><br/>";
+            lblAllService.Text += "<u>CalcPrecoPrazoRestricao</u><br/>" + await AllCorreiosResult(await FC.CalcPrecoPrazoRestricaoAsync(tbCodEmpresa1.Text, tbSenha1.Text, ddlServico1.SelectedValue, tbCepO1.Text, tbCepD1.Text, tbPeso1.Text, int.Parse(ddlFormato1.SelectedValue), decimal.Parse(tbCompr1.Text), decimal.Parse(tbAltur1.Text), decimal.Parse(tbLarg1.Text), decimal.Parse(tbDiam1.Text), ddlMaoP1.SelectedValue, decimal.Parse(tbValD1.Text), ddlAvisoR1.SelectedValue, DateTime.Now.Date.ToShortDateString())) + "<br/><br/>";
         }
 
-        private string  AllCorreiosResultado(FreteCorreios.wsCalculaPrecoPrazo.cResultado Res)
+        /// <summary>
+        /// Handling the result of functions.
+        /// </summary>
+        private async Task<string> AllCorreiosResult(FreteCorreios.wsCalculaPrecoPrazo.cResultado Res)
         {
             if (!string.IsNullOrEmpty(Res.Servicos[0].MsgErro))
                 return Res.Servicos[0].MsgErro;
             else
             {
-                string ret = "";
-
-                foreach (var x1 in Res.Servicos.ToList())
-                    foreach (var x2 in x1.GetType().GetProperties())
-                    {
-                        try
-                        {
-                            ret += x2.Name + "  =  " + x2.GetValue(x1).ToString() + "<br/>";
-                        }
-                        catch { };
-
-                    }
-                return ret;
+                var t = await Task.Run(() =>
+                                {
+                                    string ret = "";
+                                    foreach (var x1 in Res.Servicos.ToList())
+                                        foreach (var x2 in x1.GetType().GetProperties())
+                                        {
+                                            try
+                                            {
+                                                ret += x2.Name + "  =  " + x2.GetValue(x1).ToString() + "<br/>";
+                                            }
+                                            catch { };
+                                        }
+                                    return ret;
+                                });
+                return t;
             }
         }
     }
