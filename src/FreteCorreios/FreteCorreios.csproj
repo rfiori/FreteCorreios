@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Documentacao\Manual-de-Implementacao-do-Calculo-Remoto-de-Precos-e-Prazos.pdf" />
+    <None Include="Documentacao\Manual_implementacao_calculo_remoto_de_precos_e_prazos.pdf" />
+    <None Include="Documentacao\manual_rastreamentoobjetosws.pdf" />
     <None Include="Service References\wsCalculaPrecoPrazo\CalcPrecoPrazo.wsdl" />
   </ItemGroup>
   <ItemGroup>
@@ -75,9 +78,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\wsCalculaPrecoPrazo\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Documentacao\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
